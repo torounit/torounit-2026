@@ -21,8 +21,8 @@
 			]
 		},
 		"layout": {
-			"contentSize": "620px",
-			"wideSize": "1000px"
+			"contentSize": "856px",
+			"wideSize": "1384px"
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
@@ -146,6 +146,12 @@
 			"text": "var(--wp--preset--color--contrast)"
 		},
 		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--contrast)",
+					"text": "var(--wp--preset--color--base)"
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
