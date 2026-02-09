@@ -4,7 +4,7 @@ add_action( 'enqueue_block_assets', function () {
 	wp_enqueue_style( 'material-symbols', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200', array(), null );
 } );
 
-add_action( 'wp_enqueue_scripts', function () {
+add_action( 'enqueue_block_assets', function () {
 	wp_enqueue_style(
 		'theme-style',
 		get_parent_theme_file_uri( 'style.css' ),
