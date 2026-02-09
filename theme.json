@@ -113,11 +113,22 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"spacing": {
+							"padding": {
+								"bottom": "calc( var(--wp--preset--spacing--20) - 2px)",
+								"left": "calc( var(--wp--preset--spacing--40) - 2px)",
+								"right": "calc( var(--wp--preset--spacing--40) - 2px)",
+								"top": "calc( var(--wp--preset--spacing--20) - 2px)"
+							}
+						}
+					}
+				}
+			},
 			"core/navigation": {
 				"css": "--wp--style--block-gap: var(--wp--preset--spacing--40)",
-				"typography": {
-					"lineHeight": "2"
-				},
 				"elements": {
 					"link": {
 						"spacing": {
@@ -133,6 +144,9 @@
 				},
 				"spacing": {
 					"blockGap": "var(--wp--preset--spacing--40)"
+				},
+				"typography": {
+					"lineHeight": "2"
 				}
 			},
 			"core/navigation-submenu": {
@@ -158,6 +172,11 @@
 					}
 				}
 			},
+			"core/separator": {
+				"color": {
+					"background": "var(--wp--preset--color--contrast)"
+				}
+			},
 			"core/site-title": {
 				"elements": {
 					"link": {
@@ -178,11 +197,23 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--contrast)"
 		},
+		"css": "* { line-height: round(up, calc( 1em * 1.75 ), 4px ); }",
 		"elements": {
 			"button": {
+				"border": {
+					"radius": "0.25rem"
+				},
 				"color": {
 					"background": "var(--wp--preset--color--contrast)",
 					"text": "var(--wp--preset--color--base)"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--20)",
+						"left": "var(--wp--preset--spacing--40)",
+						"right": "var(--wp--preset--spacing--40)",
+						"top": "var(--wp--preset--spacing--20)"
+					}
 				}
 			},
 			"h1": {
@@ -222,9 +253,7 @@
 				}
 			},
 			"heading": {
-				"typography": {
-					"lineHeight": "round(up, calc( 1em * 1.75 ), 4px )"
-				}
+				"typography": []
 			},
 			"link": {
 				"color": {
@@ -233,6 +262,29 @@
 				"css": "text-underline-offset: 0.125em",
 				"typography": {
 					"textDecoration": "underline"
+				}
+			},
+			"select": {
+				"border": {
+					"color": "var(--wp--preset--color--contrast)",
+					"radius": "0.25rem",
+					"width": "2px"
+				},
+				"css": "appearance: base-select; &::picker(select) {appearance: base-select;} &::picker-icon { font-family: 'Material Symbols Outlined'; appearance: base-select;  content: 'arrow_drop_down';}",
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--20)",
+						"left": "var(--wp--preset--spacing--30)",
+						"right": "var(--wp--preset--spacing--30)",
+						"top": "var(--wp--preset--spacing--20)"
+					}
+				}
+			},
+			"textInput": {
+				"border": {
+					"color": "var(--wp--preset--color--contrast)",
+					"radius": "0.25rem",
+					"width": "2px"
 				}
 			}
 		},
