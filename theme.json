@@ -14,6 +14,11 @@
 					"slug": "base"
 				},
 				{
+					"color": "oklch(98.5% 0.002 247.839)",
+					"name": "Smoke",
+					"slug": "smoke"
+				},
+				{
 					"color": "oklch(20.8% 0.042 265.755)",
 					"name": "Contrast",
 					"slug": "contrast"
@@ -79,6 +84,11 @@
 					"fontFamily": "'Zen Kaku Gothic New', sans-serif",
 					"name": "Zen Kaku Gothic New",
 					"slug": "zen-kaku-gothic-new"
+				},
+				{
+					"fontFamily": "'M Plus 1 Code', monospace",
+					"name": "M Plus 1 Code",
+					"slug": "m-plus-1-code"
 				}
 			],
 			"fontSizes": [
@@ -125,6 +135,40 @@
 							}
 						}
 					}
+				}
+			},
+			"core/code": {
+				"color": {
+					"background": "var(--wp--preset--color--smoke)"
+				},
+				"css": "background-image: linear-gradient(0deg, transparent 0, color-mix(in srgb, currentColor 20%, transparent) 1px, transparent 1px);background-size: auto 1lh",
+				"spacing": {
+					"padding": {
+						"left": "var(--wp--preset--spacing--20)",
+						"right": "var(--wp--preset--spacing--20)"
+					}
+				},
+				"typography": {
+					"lineHeight": "2",
+					"fontWeight": "200",
+					"fontFamily": "var(--wp--preset--font-family--m-plus-1-code)"
+				}
+			},
+			"core/preformatted": {
+				"color": {
+					"background": "var(--wp--preset--color--smoke)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--preset--spacing--30)",
+						"bottom": "var(--wp--preset--spacing--30)",
+						"left": "var(--wp--preset--spacing--30)",
+						"right": "var(--wp--preset--spacing--30)"
+					}
+				},
+				"typography": {
+					"fontWeight": "200",
+					"fontFamily": "var(--wp--preset--font-family--m-plus-1-code)"
 				}
 			},
 			"core/navigation": {
@@ -197,7 +241,7 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--contrast)"
 		},
-		"css": "* { line-height: round(up, calc( 1em * 1.75 ), 4px ); }",
+		"css": "[class*='font-size'] { line-height: round(up, calc( 1em * 1.75 ), 4px ); }",
 		"elements": {
 			"button": {
 				"border": {
@@ -253,7 +297,7 @@
 				}
 			},
 			"heading": {
-				"typography": []
+				"css": "line-height: round(up, calc( 1em * 1.75 ), 4px );"
 			},
 			"link": {
 				"color": {

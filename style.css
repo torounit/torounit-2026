@@ -10,3 +10,19 @@
  * GitHub Theme URI: https://github.com/torounit/torounit-2026
  * Primary Branch: main
  */
+
+/*
+ * Progressive enhancement to reduce widows and orphans
+ * https://github.com/WordPress/gutenberg/issues/55190
+ */
+h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+	text-wrap: pretty;
+}
+
+/*
+ * Change the position of the more block on the front, by making it a block level element.
+ * https://github.com/WordPress/gutenberg/issues/65934
+ */
+.more-link {
+	display: block;
+}
