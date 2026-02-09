@@ -226,9 +226,6 @@
 					"link": {
 						"color": {
 							"text": "inherit"
-						},
-						"typography": {
-							"textDecoration": "underline"
 						}
 					}
 				},
