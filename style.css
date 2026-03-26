@@ -3,7 +3,7 @@
  * Requires at least: 6.9
  * Tested up to: 6.9
  * Requires PHP: 8.0
- * Version: 0.2.2
+ * Version: 0.2.3
  * Author: torounit
  * Author URI: https://torounit.com
  * Description: A WordPress theme for torounit 2026.
@@ -15,7 +15,16 @@
  * Progressive enhancement to reduce widows and orphans
  * https://github.com/WordPress/gutenberg/issues/55190
  */
-h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+caption,
+figcaption,
+p {
 	text-wrap: pretty;
 }
 
