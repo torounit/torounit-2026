@@ -257,6 +257,17 @@
 					}
 				}
 			},
+			"caption": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--preset--spacing--30)",
+						"top": "var(--wp--preset--spacing--20)"
+					}
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
