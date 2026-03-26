@@ -258,14 +258,14 @@
 				}
 			},
 			"caption": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)"
-				},
 				"spacing": {
 					"margin": {
 						"bottom": "var(--wp--preset--spacing--30)",
 						"top": "var(--wp--preset--spacing--20)"
 					}
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
 				}
 			},
 			"h1": {
@@ -362,6 +362,13 @@
 		{
 			"area": "footer",
 			"name": "footer"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "page-no-title",
+			"postTypes": ["page"],
+			"title": "Page No Title"
 		}
 	]
 }
