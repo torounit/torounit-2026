@@ -14,9 +14,19 @@
 					"slug": "base"
 				},
 				{
-					"color": "oklch(98.5% 0.002 247.839)",
-					"name": "Smoke",
-					"slug": "smoke"
+					"color": "oklch(98.4% 0.003 247.858)",
+					"name": "Subtle",
+					"slug": "subtle"
+				},
+				{
+					"color": "oklch(92.9% 0.013 255.508)",
+					"name": "Muted",
+					"slug": "muted"
+				},
+				{
+					"color": "oklch(55.4% 0.046 257.417)",
+					"name": "Dim",
+					"slug": "dim"
 				},
 				{
 					"color": "oklch(20.8% 0.042 265.755)",
@@ -116,6 +126,11 @@
 					"name": "Extra Extra Large",
 					"size": "calc( var(--wp--preset--font-size--medium) * 8 / 3 )",
 					"slug": "xx-large"
+				},
+				{
+					"name": "Extra Extra Extra Large",
+					"size": "calc( var(--wp--preset--font-size--medium) * 8 / 2 )",
+					"slug": "xxx-large"
 				}
 			]
 		},
@@ -139,7 +154,7 @@
 			},
 			"core/code": {
 				"color": {
-					"background": "var(--wp--preset--color--smoke)"
+					"background": "var(--wp--preset--color--subtle)"
 				},
 				"css": "background-image: linear-gradient(0deg, transparent 0, color-mix(in srgb, currentColor 20%, transparent) 1px, transparent 1px);background-size: auto 1lh",
 				"spacing": {
@@ -201,7 +216,7 @@
 			},
 			"core/preformatted": {
 				"color": {
-					"background": "var(--wp--preset--color--smoke)"
+					"background": "var(--wp--preset--color--subtle)"
 				},
 				"spacing": {
 					"padding": {
@@ -218,7 +233,10 @@
 			},
 			"core/separator": {
 				"color": {
-					"background": "var(--wp--preset--color--contrast)"
+					"background": "var(--wp--preset--color--muted)"
+				},
+				"border": {
+					"width": "1px"
 				}
 			},
 			"core/site-title": {
@@ -367,7 +385,9 @@
 	"customTemplates": [
 		{
 			"name": "page-no-title",
-			"postTypes": ["page"],
+			"postTypes": [
+				"page"
+			],
 			"title": "Page No Title"
 		}
 	]
