@@ -55,14 +55,16 @@ jobs:
           script: |
             const marker = '<!-- wp-playground-preview -->';
             const playgroundUrl = process.env.PLAYGROUND_URL;
-            const body = `${marker}
-## WordPress Playground でプレビュー
-
-このプルリクエストのテーマをプレビューできます。
-
-[🚀 Playground でプレビューを開く](${playgroundUrl})
-
-> WordPress とテーマユニットテストデータが自動でセットアップされます。`;
+            const body = [
+              marker,
+              '## WordPress Playground でプレビュー',
+              '',
+              'このプルリクエストのテーマをプレビューできます。',
+              '',
+              `[🚀 Playground でプレビューを開く](${playgroundUrl})`,
+              '',
+              '> WordPress とテーマユニットテストデータが自動でセットアップされます。',
+            ].join('\n');
 
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
