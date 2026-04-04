@@ -11,38 +11,17 @@ jobs:
   preview:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Generate Playground URL
         id: url
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
-          REPO: ${{ github.repository }}
         run: |
-          BLUEPRINT=$(jq -cn \
-            --arg repo_url "https://github.com/${REPO}" \
+          BLUEPRINT=$(jq \
             --arg ref "refs/pull/${PR_NUMBER}/head" \
-            '{
-              preferredVersions: { php: "8.3", wp: "latest" },
-              steps: [
-                { step: "login", username: "admin", password: "password" },
-                {
-                  step: "installTheme",
-                  themeData: {
-                    resource: "git:directory",
-                    url: $repo_url,
-                    ref: $ref,
-                    path: "/"
-                  },
-                  options: { activate: true }
-                },
-                {
-                  step: "importWxr",
-                  file: {
-                    resource: "url",
-                    url: "https://raw.githubusercontent.com/WPTT/theme-unit-test/master/themeunittestdata.wordpress.xml"
-                  }
-                }
-              ]
-            }')
+            '(.steps[] | select(.step == "installTheme") | .themeData.ref) = $ref' \
+            blueprint.json)
           ENCODED=$(echo -n "$BLUEPRINT" | base64 | tr -d '\n')
           echo "playground_url=https://playground.wordpress.net/#${ENCODED}" >> $GITHUB_OUTPUT
 
