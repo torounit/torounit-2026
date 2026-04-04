@@ -21,8 +21,7 @@ jobs:
             --arg repo_url "https://github.com/${REPO}" \
             --arg ref "refs/pull/${PR_NUMBER}/head" \
             '{
-              phpVersion: "8.3",
-              wordPressVersion: "latest",
+              preferredVersions: { php: "8.3", wp: "latest" },
               steps: [
                 { step: "login", username: "admin", password: "password" },
                 {
