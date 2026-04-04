@@ -35,13 +35,9 @@ jobs:
             const playgroundUrl = process.env.PLAYGROUND_URL;
             const body = [
               marker,
-              '## WordPress Playground でプレビュー',
+              '## WordPress Playground Preview',
               '',
-              'このプルリクエストのテーマをプレビューできます。',
-              '',
-              `[🚀 Playground でプレビューを開く](${playgroundUrl})`,
-              '',
-              '> WordPress とテーマユニットテストデータが自動でセットアップされます。',
+              `[Preview on WordPress Playground](${playgroundUrl})`,
             ].join('\n');
 
             const { data: comments } = await github.rest.issues.listComments({
