@@ -20,12 +20,13 @@
           "name": "header",
           "y": 0,
           "height": "fit_content",
+          "x": 75,
           "descendants": {
             "ouSgh": {
               "width": "fit_content",
               "height": "fit_content",
               "x": 30,
-              "y": 0
+              "y": 30
             },
             "FJgUb": {
               "width": "fit_content",
@@ -38,7 +39,7 @@
             },
             "SlBm3": {
               "x": 1232,
-              "y": 26
+              "y": 30
             }
           }
         },
@@ -466,8 +467,9 @@
           "ref": "0wwlK",
           "width": 1290,
           "name": "footer",
-          "y": 1661,
+          "y": 1721,
           "height": "fit_content",
+          "x": 75,
           "descendants": {
             "Ppw1Z": {
               "x": 508,
@@ -502,7 +504,7 @@
               "width": "fit_content",
               "height": "fit_content",
               "x": 30,
-              "y": 0
+              "y": 30
             },
             "FJgUb": {
               "width": "fit_content",
@@ -515,7 +517,7 @@
             },
             "SlBm3": {
               "x": 1232,
-              "y": 26
+              "y": 30
             }
           }
         },
@@ -774,7 +776,7 @@
           "width": 1290,
           "name": "newFooter",
           "x": 75,
-          "y": 2034,
+          "y": 2094,
           "height": "fit_content",
           "descendants": {
             "Ppw1Z": {
@@ -793,12 +795,8 @@
       "name": "Component/Header",
       "reusable": true,
       "width": 1290,
-      "padding": [
-        0,
-        "$--spacing-small"
-      ],
+      "padding": "$--spacing-small",
       "justifyContent": "space_between",
-      "alignItems": "center",
       "children": [
         {
           "type": "frame",
@@ -2546,6 +2544,598 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "IMAOR",
+      "x": 3251,
+      "y": 0,
+      "name": "TOP Page",
+      "width": 1440,
+      "fill": "$--color-base",
+      "layout": "vertical",
+      "alignItems": "center",
+      "children": [
+        {
+          "id": "N8Zsx",
+          "type": "ref",
+          "ref": "x9FXS",
+          "width": 1290,
+          "name": "topHeader",
+          "x": 75,
+          "y": 0,
+          "height": "fit_content",
+          "descendants": {
+            "ouSgh": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 30,
+              "y": 30
+            },
+            "FJgUb": {
+              "width": "fit_content",
+              "height": "fit_content",
+              "x": 96,
+              "y": 4
+            },
+            "o6fCL": {
+              "y": 44
+            },
+            "SlBm3": {
+              "x": 1232,
+              "y": 30
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "7RNPf",
+          "name": "Hero Section",
+          "width": 850,
+          "layout": "vertical",
+          "gap": "$--spacing-xsmall",
+          "padding": [
+            "$--spacing-xxlarge",
+            0,
+            "$--spacing-xlarge",
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "bmCUA",
+              "name": "Hero Name",
+              "fill": "$--color-contrast",
+              "content": "Toro_Unit",
+              "lineHeight": 1.2,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": 72,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "niWhh",
+              "name": "Hero Tagline",
+              "fill": "$--color-contrast",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "フリーランスの\nフロントエンドエンジニア、\nWordPress エンジニア。",
+              "lineHeight": 1.75,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": "$--font-size-xl",
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "K8IRS",
+              "name": "Hero Description",
+              "fill": "#6B7B6B",
+              "content": "ウェブの技術で、あなたのアイデアを形にします。",
+              "lineHeight": 1.75,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": "$--font-size-medium",
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZQns0",
+          "name": "About Section",
+          "width": 850,
+          "layout": "vertical",
+          "gap": "$--spacing-small",
+          "padding": [
+            "$--spacing-large",
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "n3bVK",
+              "name": "About Label",
+              "fill": "$--color-contrast",
+              "content": "ABOUT",
+              "lineHeight": 1.75,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": 12,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "1JFzo",
+              "name": "About Text",
+              "fill": "$--color-contrast",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "東京を拠点に活動するフリーランスのフロントエンドエンジニアです。WordPress のブロックテーマ開発やプラグイン開発を専門とし、Gutenberg エディターのカスタムブロック開発にも力を入れています。",
+              "lineHeight": 1.75,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": "$--font-size-medium",
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "1FIgc",
+              "name": "About Text 2",
+              "fill": "$--color-contrast",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "オープンソースコミュニティへの貢献を大切にし、WordCamp や WordPress Meetup での登壇経験もあります。パフォーマンスとアクセシビリティを重視した、持続可能なウェブ制作を心がけています。",
+              "lineHeight": 1.75,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": "$--font-size-medium",
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "ixw9h",
+          "name": "Divider",
+          "fill": "#E8E8E8",
+          "width": 850,
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "MLo5K",
+          "name": "Skills Section",
+          "width": 850,
+          "layout": "vertical",
+          "gap": "$--spacing-small",
+          "padding": [
+            "$--spacing-large",
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "L5RYA",
+              "name": "sectionTitle",
+              "fill": "$--color-contrast",
+              "content": "SKILLS & SERVICES",
+              "fontFamily": "$--font-body",
+              "fontSize": "$--font-size-small",
+              "fontWeight": "300",
+              "letterSpacing": 3
+            },
+            {
+              "type": "frame",
+              "id": "4i0zJ",
+              "name": "gridRow1",
+              "width": "fill_container",
+              "gap": "$--spacing-medium",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IHzRZ",
+                  "name": "skill1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$--spacing-tiny",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VFR5m",
+                      "name": "skill1Title",
+                      "fill": "$--color-contrast",
+                      "content": "Frontend Development",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-large",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "4Zwt9",
+                      "name": "skill1Desc",
+                      "fill": "#6B7B6B",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "React, TypeScript, Next.js を用いたモダンなフロントエンド開発",
+                      "lineHeight": 1.7,
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-small",
+                      "fontWeight": "300"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XeYlZ",
+                  "name": "skill2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$--spacing-tiny",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v9AOW",
+                      "name": "skill2Title",
+                      "fill": "$--color-contrast",
+                      "content": "WordPress",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-large",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PkOBE",
+                      "name": "skill2Desc",
+                      "fill": "#6B7B6B",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ブロックテーマ開発、プラグイン開発、Gutenberg カスタムブロック",
+                      "lineHeight": 1.7,
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-small",
+                      "fontWeight": "300"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "adgsx",
+              "name": "gridRow2",
+              "width": "fill_container",
+              "gap": "$--spacing-medium",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "e7x7N",
+                  "name": "skill3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$--spacing-tiny",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nsMfx",
+                      "name": "skill3Title",
+                      "fill": "$--color-contrast",
+                      "content": "Web Performance",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-large",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TtKkY",
+                      "name": "skill3Desc",
+                      "fill": "#6B7B6B",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Core Web Vitals の改善、パフォーマンス最適化",
+                      "lineHeight": 1.7,
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-small",
+                      "fontWeight": "300"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uf5gV",
+                  "name": "skill4",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$--spacing-tiny",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "czbyq",
+                      "name": "skill4Title",
+                      "fill": "$--color-contrast",
+                      "content": "Technical Consulting",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-large",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "T2amC",
+                      "name": "skill4Desc",
+                      "fill": "#6B7B6B",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "アーキテクチャ設計、技術選定、コードレビュー",
+                      "lineHeight": 1.7,
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-small",
+                      "fontWeight": "300"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "DoQhT",
+          "name": "Divider 2",
+          "fill": "#E8E8E8",
+          "width": 850,
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "Nei8R",
+          "name": "Recent Posts Section",
+          "width": 850,
+          "layout": "vertical",
+          "gap": "$--spacing-small",
+          "padding": [
+            "$--spacing-large",
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "2EyCj",
+              "name": "postsTitle",
+              "fill": "$--color-contrast",
+              "content": "RECENT POSTS",
+              "fontFamily": "$--font-body",
+              "fontSize": "$--font-size-small",
+              "fontWeight": "300",
+              "letterSpacing": 3
+            },
+            {
+              "type": "frame",
+              "id": "6QrSa",
+              "name": "postsList",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8jUFH",
+                  "name": "post1Row",
+                  "width": "fill_container",
+                  "padding": [
+                    "$--spacing-xsmall",
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uChaL",
+                      "name": "post1Title",
+                      "fill": "$--color-contrast",
+                      "content": "WordPress 6.9 で導入されたブロックテーマの新機能まとめ",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-medium",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JbkU7",
+                      "name": "post1Date",
+                      "fill": "#8A8A8A",
+                      "content": "2026.01.15",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-small",
+                      "fontWeight": "300"
+                    }
+                  ]
+                },
+                {
+                  "type": "line",
+                  "id": "0z0Lu",
+                  "name": "divider1",
+                  "width": "fill_container",
+                  "height": 0,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#F0F0F0"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "qft59",
+                  "name": "post2Row",
+                  "width": "fill_container",
+                  "padding": [
+                    "$--spacing-xsmall",
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cWq7K",
+                      "name": "post2Title",
+                      "fill": "$--color-contrast",
+                      "content": "Interactivity API を使ったインタラクティブなブロック開発",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-medium",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rLECF",
+                      "name": "post2Date",
+                      "fill": "#8A8A8A",
+                      "content": "2025.12.20",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-small",
+                      "fontWeight": "300"
+                    }
+                  ]
+                },
+                {
+                  "type": "line",
+                  "id": "nBq2e",
+                  "name": "divider2",
+                  "width": "fill_container",
+                  "height": 0,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#F0F0F0"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "wrVuo",
+                  "name": "post3Row",
+                  "width": "fill_container",
+                  "padding": [
+                    "$--spacing-xsmall",
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "q6sTS",
+                      "name": "post3Title",
+                      "fill": "$--color-contrast",
+                      "content": "フリーランスエンジニアとしての働き方とリモートワーク環境",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-medium",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pvXU8",
+                      "name": "post3Date",
+                      "fill": "#8A8A8A",
+                      "content": "2025.11.08",
+                      "fontFamily": "$--font-body",
+                      "fontSize": "$--font-size-small",
+                      "fontWeight": "300"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "alx1A",
+          "name": "Divider 3",
+          "fill": "#E8E8E8",
+          "width": 850,
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "Nw3KU",
+          "name": "Contact Section",
+          "width": 850,
+          "layout": "vertical",
+          "gap": "$--spacing-small",
+          "padding": [
+            "$--spacing-large",
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "F7HeV",
+              "name": "Contact Label",
+              "fill": "$--color-contrast",
+              "content": "CONTACT",
+              "lineHeight": 1.75,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": 12,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "8cfpI",
+              "name": "Contact Description",
+              "fill": "$--color-contrast",
+              "content": "お仕事のご相談・ご依頼はこちらから",
+              "lineHeight": 1.75,
+              "fontFamily": "Zen Kaku Gothic New",
+              "fontSize": "$--font-size-medium",
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "G765B",
+              "name": "Contact Button",
+              "fill": "$--color-contrast",
+              "cornerRadius": 4,
+              "padding": [
+                "$--spacing-tiny",
+                "$--spacing-small"
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AXKy5",
+                  "name": "Button Text",
+                  "fill": "$--color-base",
+                  "content": "お問い合わせ",
+                  "lineHeight": 1.75,
+                  "fontFamily": "Zen Kaku Gothic New",
+                  "fontSize": "$--font-size-medium",
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "L6YEB",
+          "type": "ref",
+          "ref": "0wwlK",
+          "width": 1290,
+          "name": "topFooter",
+          "x": 75,
+          "y": 2424,
+          "height": "fit_content",
+          "descendants": {
+            "Ppw1Z": {
+              "x": 508,
+              "y": 130
+            }
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "PuOox",
+          "name": "Divider 4",
+          "fill": "#E8E8E8",
+          "width": 850,
+          "height": 1
         }
       ]
     }
