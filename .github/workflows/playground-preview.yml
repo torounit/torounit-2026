@@ -1,0 +1,89 @@
+name: WordPress Playground Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Playground URL
+        id: url
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          BLUEPRINT=$(jq -cn \
+            --arg repo_url "https://github.com/${REPO}" \
+            --arg ref "refs/pull/${PR_NUMBER}/head" \
+            '{
+              phpVersion: "8.3",
+              wordPressVersion: "latest",
+              steps: [
+                { step: "login", username: "admin", password: "password" },
+                {
+                  step: "installTheme",
+                  themeData: {
+                    resource: "git:directory",
+                    url: $repo_url,
+                    ref: $ref,
+                    path: "/"
+                  },
+                  options: { activate: true }
+                },
+                {
+                  step: "importWxr",
+                  file: {
+                    resource: "url",
+                    url: "https://raw.githubusercontent.com/WPTT/theme-unit-test/master/themeunittestdata.wordpress.xml"
+                  }
+                }
+              ]
+            }')
+          ENCODED=$(echo -n "$BLUEPRINT" | base64 | tr -d '\n')
+          echo "playground_url=https://playground.wordpress.net/#${ENCODED}" >> $GITHUB_OUTPUT
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        env:
+          PLAYGROUND_URL: ${{ steps.url.outputs.playground_url }}
+        with:
+          script: |
+            const marker = '<!-- wp-playground-preview -->';
+            const playgroundUrl = process.env.PLAYGROUND_URL;
+            const body = `${marker}
+## WordPress Playground でプレビュー
+
+このプルリクエストのテーマをプレビューできます。
+
+[🚀 Playground でプレビューを開く](${playgroundUrl})
+
+> WordPress とテーマユニットテストデータが自動でセットアップされます。`;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existing = comments.find(c => c.body.includes(marker));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
