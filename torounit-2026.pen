@@ -1,5 +1,5 @@
 {
-  "version": "2.9",
+  "version": "2.10",
   "children": [
     {
       "type": "frame",
@@ -613,12 +613,18 @@
               "type": "frame",
               "id": "wLwu8",
               "name": "Featured Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "hdbernd",
+                "link": "https://unsplash.com/@hdbernd",
+                "author": "Bernd 📷 Dittrich"
+              },
               "width": "fill_container",
               "height": 450,
               "fill": {
                 "type": "image",
                 "enabled": true,
-                "url": "./images/generated-1774506095094.png",
+                "url": "https://images.unsplash.com/photo-1649451844802-f444b7885ec1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUyODM3Nzh8&ixlib=rb-4.1.0&q=80&w=1080",
                 "mode": "fill"
               }
             },
@@ -809,10 +815,16 @@
               "type": "ellipse",
               "id": "yoqCr",
               "name": "Site Logo",
+              "metadata": {
+                "type": "unsplash",
+                "username": "maria_shalabaieva",
+                "link": "https://unsplash.com/@maria_shalabaieva",
+                "author": "Mariia Shalabaieva"
+              },
               "fill": {
                 "type": "image",
                 "enabled": true,
-                "url": "./images/generated-1774506298614.png",
+                "url": "https://images.unsplash.com/photo-1669220235918-04cbf9e054b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUyODM3NzB8&ixlib=rb-4.1.0&q=80&w=1080",
                 "mode": "fill"
               },
               "width": 80,
