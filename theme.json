@@ -166,7 +166,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--m-plus-1-code)",
 					"fontWeight": "200",
-					"lineHeight": "2"
+					"lineHeight": "1.5"
 				}
 			},
 			"core/navigation": {
