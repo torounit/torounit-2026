@@ -1,6 +1,15 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
 	"version": 3,
+	"customTemplates": [
+		{
+			"name": "page-no-title",
+			"postTypes": [
+				"page"
+			],
+			"title": "Page No Title"
+		}
+	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -232,11 +241,11 @@
 				}
 			},
 			"core/separator": {
-				"color": {
-					"background": "var(--wp--preset--color--muted)"
-				},
 				"border": {
 					"width": "1px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--muted)"
 				}
 			},
 			"core/site-title": {
@@ -380,15 +389,6 @@
 		{
 			"area": "footer",
 			"name": "footer"
-		}
-	],
-	"customTemplates": [
-		{
-			"name": "page-no-title",
-			"postTypes": [
-				"page"
-			],
-			"title": "Page No Title"
 		}
 	]
 }
