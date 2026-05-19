@@ -384,11 +384,18 @@
 	"templateParts": [
 		{
 			"area": "header",
-			"name": "header"
+			"name": "header",
+			"title": "Header"
 		},
 		{
 			"area": "footer",
-			"name": "footer"
+			"name": "footer",
+			"title": "Footer"
+		},
+		{
+			"area": "navigation-overlay",
+			"name": "navigation-overlay",
+			"title": "Navigation Overlay"
 		}
 	]
 }
