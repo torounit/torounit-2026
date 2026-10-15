@@ -30,6 +30,13 @@
         "resource": "url",
         "url": "https://raw.githubusercontent.com/WPTT/theme-unit-test/master/themeunittestdata.wordpress.xml"
       }
+    },
+    {
+      "step": "importWxr",
+      "file": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/64-block-test-data.xml"
+      }
     }
   ]
 }
