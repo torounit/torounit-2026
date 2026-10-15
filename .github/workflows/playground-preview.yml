@@ -20,7 +20,7 @@ jobs:
           result-encoding: string
           script: |
             const fs = require('fs');
-            const blueprint = JSON.parse(fs.readFileSync('.github/playground/blueprint.json', 'utf8'));
+            const blueprint = JSON.parse(fs.readFileSync('.github/blueprint.json', 'utf8'));
             const installTheme = blueprint.steps.find(s => s.step === 'installTheme');
             if (installTheme) {
               installTheme.themeData.ref = `refs/pull/${context.issue.number}/head`;
