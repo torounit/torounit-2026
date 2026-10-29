@@ -33,6 +33,6 @@ torounit の個人サイト向け WordPress ブロックテーマ（FSE: フル�
 
 - npm/composer/ビルドステップなし — ファイルを直接編集し WordPress 環境で確認する。
 - テンプレート・パーツは Gutenberg ブロックコメント構文（`<!-- wp:block-name {...} /-->`）を使用する。
-- `.pen` ファイル（[design/torounit-2026.pen](design/torounit-2026.pen)）は Pencil デザインファイル — 読み書きには `pencil` MCP ツールを使用し、Read/Edit ツールは使わない。
+- `.pen` ファイル（[design.pen](design.pen)）は Pencil デザインファイル — 読み書きには `pencil` MCP ツールを使用し、Read/Edit ツールは使わない。
 - `theme.json` のスペーシングは `calc()` と `var()` を組み合わせて記述する。新しいサイズを追加する際はフィボナッチスケールのパターンに従う。
 - フォントサイズの `line-height` は CSS `round()` で 1/4rem グリッドにスナップする（`theme.json` のグローバル CSS を参照）。
