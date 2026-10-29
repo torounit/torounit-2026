@@ -1,7 +1,7 @@
 /**
  * Theme Name: torounit 2026
- * Requires at least: 6.9
- * Tested up to: 6.9
+ * Requires at least: 7.1
+ * Tested up to: 7.1
  * Requires PHP: 8.0
  * Version: 0.3.2
  * Author: torounit
@@ -36,6 +36,17 @@ p {
 	display: block;
 }
 
+/*
+ * Scale rem (and thus type and spacing) up on wide viewports.
+ * Media query units are based on the initial font size, so this does not affect the breakpoint.
+ * Keep the breakpoint in sync with settings.viewport.tablet in theme.json.
+ */
 :root {
-	font-size: clamp(1rem, -249rem + 400vw, 1.25rem);
+	font-size: 100%;
+}
+
+@media (width > 62.5rem) {
+	:root {
+		font-size: 125%;
+	}
 }
