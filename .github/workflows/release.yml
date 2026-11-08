@@ -14,21 +14,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
-        id: release
-
-      # Releases created with GITHUB_TOKEN don't trigger other workflows,
-      # so the theme package is built and attached in this same job.
-      - uses: actions/checkout@v4
-        if: ${{ steps.release.outputs.release_created }}
-        with:
-          ref: ${{ steps.release.outputs.tag_name }}
-
-      - name: Build theme package
-        if: ${{ steps.release.outputs.release_created }}
-        run: .github/scripts/build-release.sh "${{ steps.release.outputs.tag_name }}" dist
-
-      - name: Upload release assets
-        if: ${{ steps.release.outputs.release_created }}
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${{ steps.release.outputs.tag_name }}" dist/torounit-2026.zip dist/update.json --clobber
