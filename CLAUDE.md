@@ -13,6 +13,7 @@ torounit の個人サイト向け WordPress ブロックテーマ（FSE: フル�
 - **[theme.json](theme.json)** — メイン設定ファイル。カラーパレット・スペーシングスケール・タイポグラフィ・レイアウト幅・コアブロックのグローバルスタイルを定義。
 - **[style.css](style.css)** — 最小限のCSS。テーマメタデータヘッダーと小さなプログレッシブエンハンスメントのみ（プリプロセッサ不使用）。
 - **[functions.php](functions.php)** — Google Fonts（Zen Kaku Gothic New・M PLUS 1 Code・Material Symbols Outlined）のエンキュー、投稿フォーマットサポート、コンテンツ幅の設定。
+- **[inc/updater.php](inc/updater.php)** — GitHub Releases からのテーマ自動更新（`Update URI` ヘッダー + `update_themes_github.com` フィルター）。
 - **[templates/](templates/)** — Gutenberg ブロックマークアップで記述したフルページテンプレート。
 - **[parts/](parts/)** — 再利用可能なテンプレートパーツ（`header.html`、`footer.html`）。
 - **[patterns/](patterns/)** — ブロックパターン（PHPファイル、ドキュメントコメントにメタデータヘッダーを記述）。
@@ -36,3 +37,11 @@ torounit の個人サイト向け WordPress ブロックテーマ（FSE: フル�
 - `.pen` ファイル（[design.pen](design.pen)）は Pencil デザインファイル — 読み書きには `pencil` MCP ツールを使用し、Read/Edit ツールは使わない。
 - `theme.json` のスペーシングは `calc()` と `var()` を組み合わせて記述する。新しいサイズを追加する際はフィボナッチスケールのパターンに従う。
 - フォントサイズの `line-height` は CSS `round()` で 1/4rem グリッドにスナップする（`theme.json` のグローバル CSS を参照）。
+
+## リリースと自動更新
+
+- バージョン管理は [release-please](https://github.com/googleapis/release-please) が行う。**コミットメッセージ（スカッシュマージ時は PR タイトル）は Conventional Commits 形式**（`feat:` / `fix:` / `chore:` など）で書く。
+- `style.css` の `Version` は手で書き換えない。`x-release-please-start-version` / `x-release-please-end` で囲まれた行を release-please が更新する（`version.txt` と `.release-please-manifest.json` も同様）。
+- main へのマージごとに Release PR が更新される。Release PR をマージするとタグ（`v` なし、例 `0.4.0`）と GitHub Release が作成され、[.github/scripts/build-release.sh](.github/scripts/build-release.sh) が作るテーマ zip と `update.json` がアセットとして添付される。
+- 本番サイトは [inc/updater.php](inc/updater.php) が `releases/latest/download/update.json` を参照して更新を検知し、WordPress のバックグラウンド更新で自動更新される。
+- 配布 zip は `git archive` で作るため、配布に含めないファイルは [.gitattributes](.gitattributes) に `export-ignore` を追加する。
