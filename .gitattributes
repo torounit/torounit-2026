@@ -8,3 +8,7 @@
 /package.json export-ignore
 /package-lock.json export-ignore
 /design.pen export-ignore
+/release-please-config.json export-ignore
+/.release-please-manifest.json export-ignore
+/version.txt export-ignore
+/CHANGELOG.md export-ignore

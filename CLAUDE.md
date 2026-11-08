@@ -36,3 +36,11 @@ torounit の個人サイト向け WordPress ブロックテーマ（FSE: フル�
 - `.pen` ファイル（[design.pen](design.pen)）は Pencil デザインファイル — 読み書きには `pencil` MCP ツールを使用し、Read/Edit ツールは使わない。
 - `theme.json` のスペーシングは `calc()` と `var()` を組み合わせて記述する。新しいサイズを追加する際はフィボナッチスケールのパターンに従う。
 - フォントサイズの `line-height` は CSS `round()` で 1/4rem グリッドにスナップする（`theme.json` のグローバル CSS を参照）。
+
+## リリースと自動更新
+
+- バージョン管理は [release-please](https://github.com/googleapis/release-please) が行う。**コミットメッセージ（スカッシュマージ時は PR タイトル）は Conventional Commits 形式**（`feat:` / `fix:` / `chore:` など）で書く。
+- `style.css` の `Version` は手で書き換えない。`x-release-please-start-version` / `x-release-please-end` で囲まれた行を release-please が更新する（`version.txt` と `.release-please-manifest.json` も同様）。
+- main へのマージごとに Release PR が更新される。Release PR をマージするとタグ（`v` なし、例 `0.4.0`）と GitHub Release が作成される。
+- 本番サイトでは [Git Updater](https://git-updater.com/) プラグインが `style.css` の `GitHub Theme URI` / `Primary Branch` ヘッダーを読み、最新タグのソース zip で更新する。Git Updater はタグと `Version` の一致を前提にしているので、`Version` は必ず release-please 経由で上げる。
+- 配布されるのは GitHub のソース zip（`git archive` 相当）なので、配布に含めないファイルは [.gitattributes](.gitattributes) に `export-ignore` を追加する。
