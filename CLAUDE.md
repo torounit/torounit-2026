@@ -4,7 +4,7 @@
 
 ## 概要
 
-torounit の個人サイト向け WordPress ブロックテーマ（FSE: フルサイト編集）。WordPress 6.9+ / PHP 8.0+ を対象としています。
+torounit の個人サイト向け WordPress ブロックテーマ（FSE: フルサイト編集）。WordPress 7.1+ / PHP 8.0+ を対象としています。
 
 ## テーマの構成
 
